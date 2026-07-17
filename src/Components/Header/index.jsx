@@ -6,6 +6,8 @@ import CountryDropdown from '../CountryDropdown';
 import { IoIosSearch } from "react-icons/io";
 import { FiUser } from "react-icons/fi";
 import { IoBagOutline } from "react-icons/io5";
+import SearchBox from './SearchBox';
+import Navigation from './Navigation';
 
 
 const Header=()=>{
@@ -21,12 +23,7 @@ const Header=()=>{
                          <div className='col-sm-9 d-flex align-items-center part2  ' >
                              <CountryDropdown/>
 
-                             {/* Header Search Start Here */}
-                                 <div className='headerSearch   ms-4 ms-auto me-3'>
-                                    <input type='text' placeholder='Search for products...'/>
-                                   <Button>< IoIosSearch /></Button> 
-                                 </div>
-                             {/*Header Search ends Here */}
+                                <SearchBox/>
 
                              <div className='part3 d-flex align-items-center  ms-auto '>
                                <Button className='circle mr-3'><FiUser/></Button>
@@ -44,6 +41,10 @@ const Header=()=>{
                     </div>
                   </div>
                 </header>
+
+
+             <Navigation/>   
+    
            
         </>
     )
