@@ -6,6 +6,8 @@ import Header from "./Components/Header";
 import { createContext, useEffect, useState } from "react";
 import axios from 'axios';
 
+
+
 const MyContext= createContext();
 
 
@@ -41,7 +43,7 @@ function App() {
     <BrowserRouter>
     <MyContext.Provider value={values}>
       <Header />
-
+  
       <Routes>
         <Route path="/" element={<Home />} />
       </Routes>

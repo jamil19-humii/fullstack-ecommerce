@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import Button from '@mui/material/Button';
 import { IoIosMenu } from "react-icons/io";
 import { FaAngleDown } from "react-icons/fa";
@@ -6,7 +7,7 @@ import { Link } from 'react-router-dom';
 
 const  Navigation = ()=>{
 
-    const [isopenSidebarVal, setisopenSidebarVal] = useState(true);
+    const [isopenSidebarVal, setisopenSidebarVal] = useState(false);
     return(
   <nav>
                     <div className='container'>
@@ -19,9 +20,16 @@ const  Navigation = ()=>{
                                 <span className='icon2'><FaAngleDown/></span>
                              </Button>
 
-                             <div className={'sidebarNav ${isopenSidebarVal===true ? "open" : " "}'}>
+                             <div className={`sidebarNav ${isopenSidebarVal ? 'open' : ''}`}>
+                        
                                 <ul>
                                  <li> <Link to="/"><Button>men</Button></Link></li>
+                                   <li> <Link to="/"><Button>women</Button></Link></li>
+                                    <li><Link to="/"><Button>beauty</Button></Link></li>
+                                   <li> <Link to="/"><Button>watches</Button></Link></li>
+                                   <li> <Link to="/"><Button>kids</Button></Link></li>
+                                    <li><Link to="/"><Button>gifts</Button></Link></li>
+                                     <li> <Link to="/"><Button>men</Button></Link></li>
                                    <li> <Link to="/"><Button>women</Button></Link></li>
                                     <li><Link to="/"><Button>beauty</Button></Link></li>
                                    <li> <Link to="/"><Button>watches</Button></Link></li>
