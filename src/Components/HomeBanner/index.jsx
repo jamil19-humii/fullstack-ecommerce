@@ -3,8 +3,18 @@ import Home from "../../assets/Images/Home.png";
 import banner1 from "../../assets/Images/banner1.png";
 import banner2 from "../../assets/Images/banner2.png";
 import banner3 from "../../assets/Images/banner3.png";
+import banner4 from "../../assets/Images/banner4.png";
+import bannerVideo from "../../assets/Images/banner-video.mp4";
 
-const banners = [Home, banner1, banner2, banner3];
+const banners = [
+  { type: "image", src: Home },
+  { type: "image", src: banner1 },
+   { type: "video", src: bannerVideo },
+  { type: "image", src: banner2 },
+  { type: "image", src: banner3 },
+  { type: "image", src: banner4 },
+  
+];
 
 const HomeBanner = () => {
   const [current, setCurrent] = useState(1);
@@ -12,11 +22,11 @@ const HomeBanner = () => {
   const loopBanners = [banners[banners.length - 1], ...banners, banners[0]];
 
   const prevSlide = () => {
-    setCurrent((prev) => prev - 1);
+    setCurrent((prev) => (prev === 0 ? prev : prev - 1));
   };
 
   const nextSlide = () => {
-    setCurrent((prev) => prev + 1);
+    setCurrent((prev) => (prev === banners.length + 1 ? prev : prev + 1));
   };
 
   const handleTransitionEnd = () => {
@@ -46,13 +56,19 @@ const HomeBanner = () => {
             transition: isAnimating ? "transform 0.45s ease" : "none",
           }}
         >
-          {loopBanners.map((src, index) => (
+          {loopBanners.map((banner, index) => (
             <div
-              className="slide"
-              key={`${src}-${index}`}
-              style={{ backgroundImage: `url(${src})` }}
+              className={`slide ${banner.type === "video" ? "videoSlide" : ""}`}
+              key={`${banner.src}-${index}`}
+              style={banner.type === "image" ? { backgroundImage: `url(${banner.src})` } : undefined}
             >
-              <img src={src} alt={`Banner ${index + 1}`} />
+              {banner.type === "video" ? (
+                <video autoPlay loop muted playsInline>
+                  <source src={banner.src} type="video/mp4" />
+                </video>
+              ) : (
+                <img src={banner.src} alt={`Banner ${index + 1}`} />
+              )}
             </div>
           ))}
         </div>

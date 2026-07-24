@@ -166,7 +166,8 @@ nav .navPart2 ul li:hover .submenu{opacity:1; visibility:inherit; top:100%;}
   background-size: cover;
 }
 
-.slide img {
+.slide img,
+.slide video {
   position: relative;
   z-index: 1;
   width: 100%;
@@ -174,6 +175,10 @@ nav .navPart2 ul li:hover .submenu{opacity:1; visibility:inherit; top:100%;}
   object-fit: contain;
   object-position: center;
   display: block;
+}
+
+.videoSlide {
+  background: #060b13;
 }
 
 .slide::before {
