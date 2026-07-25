@@ -3,18 +3,34 @@ import Button from '@mui/material/Button';
 import { IoIosMenu } from "react-icons/io";
 import { FaAngleDown } from "react-icons/fa";
 import { Link } from 'react-router-dom';
-
+import { FaAngleRight } from "react-icons/fa";
 
 const  Navigation = ()=>{
 
     const [isopenSidebarVal, setisopenSidebarVal] = useState(false);
+    const [activeSubmenu, setActiveSubmenu] = useState(null);
+
+    const toggleSidebar = () => {
+        setisopenSidebarVal((isOpen) => !isOpen);
+        setActiveSubmenu(null);
+    };
+
+    const toggleSubmenu = (category) => {
+        setActiveSubmenu((activeCategory) =>
+            activeCategory === category ? null : category
+        );
+    };
     return(
   <nav>
                     <div className='container'>
                         <div className='row'>
                         <div className='col-sm-3 navPart1'>
                             <div className='catWrapper'>
-                                <Button className='allCatTab align-items-center' onClick={()=>setisopenSidebarVal(!isopenSidebarVal)}>
+                                <Button
+                                    className='allCatTab align-items-center'
+                                    onClick={toggleSidebar}
+                                    aria-expanded={isopenSidebarVal}
+                                >
                                 <span className='icon1'><IoIosMenu/></span>
                                 <span className="text">ALL CATEGORIES</span>
                                 <span className='icon2'><FaAngleDown/></span>
@@ -22,9 +38,39 @@ const  Navigation = ()=>{
 
                              <div className={`sidebarNav ${isopenSidebarVal ? 'open' : ''}`}>
                         
-                                <ul>
-                                 <li> <Link to="/"><Button>men</Button></Link></li>
-                                   <li> <Link to="/"><Button>women</Button></Link></li>
+                        <ul>
+                            <li className={activeSubmenu === "men" ? "active" : ""}>
+                                <Button
+                                    onClick={() => toggleSubmenu("men")}
+                                    aria-expanded={activeSubmenu === "men"}
+                                >
+                                    men <FaAngleRight className='ml-auto'/>
+                                </Button>
+                                <div className="submenu">
+                                    <Link to="/"><Button>clothing</Button></Link>
+                                    <Link to="/"><Button>footwear</Button></Link>
+                                    <Link to="/"><Button>watches</Button></Link>
+                                    <Link to="/"><Button>clothing</Button></Link>
+                                    <Link to="/"><Button>footwear</Button></Link>
+                                    <Link to="/"><Button>watches</Button></Link>
+                                       </div>
+                            </li>
+                                   <li className={activeSubmenu === "women" ? "active" : ""}>
+                                        <Button
+                                            onClick={() => toggleSubmenu("women")}
+                                            aria-expanded={activeSubmenu === "women"}
+                                        >
+                                            women <FaAngleRight className='ml-auto'/>
+                                        </Button>
+                                        <div className="submenu">
+                                            <Link to="/"><Button>clothing</Button></Link>
+                                            <Link to="/"><Button>footwear</Button></Link>
+                                            <Link to="/"><Button>watches</Button></Link>
+                                            <Link to="/"><Button>clothing</Button></Link>
+                                            <Link to="/"><Button>footwear</Button></Link>
+                                            <Link to="/"><Button>watches</Button></Link>
+                                        </div>
+                                   </li>
                                     <li><Link to="/"><Button>beauty</Button></Link></li>
                                    <li> <Link to="/"><Button>watches</Button></Link></li>
                                    <li> <Link to="/"><Button>kids</Button></Link></li>
@@ -35,7 +81,7 @@ const  Navigation = ()=>{
                                    <li> <Link to="/"><Button>watches</Button></Link></li>
                                    <li> <Link to="/"><Button>kids</Button></Link></li>
                                     <li><Link to="/"><Button>gifts</Button></Link></li>
-                                </ul>
+                         </ul>
                              </div>
                             </div>
                         </div>

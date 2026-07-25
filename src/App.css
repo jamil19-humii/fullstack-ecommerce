@@ -1,7 +1,8 @@
-*{margin:0px; padding:0px}
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 @import url('https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css');
 @import url('https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css');
+*{margin:0px; padding:0px}
+
 
 body{font-family:"Lato", sans-serif;}
 
@@ -65,7 +66,7 @@ nav .navPart1 .catWrapper{position:relative;  width: 100%;}
 nav .navPart1 .catWrapper .sidebarNav {
   display: none;
   position: absolute;
-  top: 100%;
+  top: 150%;
   left: 0;
   margin-top: 4px;
   width: 100%;
@@ -75,13 +76,13 @@ nav .navPart1 .catWrapper .sidebarNav {
   z-index: 1000;
 }
 
-nav .navPart1 .catWrapper:hover .sidebarNav,
-nav .navPart1 .catWrapper:focus-within .sidebarNav {
+nav .navPart1 .catWrapper .sidebarNav.open{
   display: block;
+  max-height: 520px;
+  opacity: 1;
+  visibility: visible;
+  overflow: visible;
 }
-
-
-nav .navPart1 .catWrapper .sidebarNav.open{max-height: 400px; opacity:1; visibility:visible;overflow-y:auto;}
 
 nav .navPart1 .catWrapper .sidebarNav ul {
   margin: 0;
@@ -90,7 +91,7 @@ nav .navPart1 .catWrapper .sidebarNav ul {
   flex-direction: column;
   gap: 6px;
 }
-nav .navPart1 .catWrapper .sidebarNav ul  li{width:100%;list-style: none;padding:0; }
+nav .navPart1 .catWrapper .sidebarNav ul  li{width:100%;list-style: none;padding:0px 10px; }
 nav .navPart1 .catWrapper .sidebarNav ul li a {
   display: block;
   width: 100%;
@@ -101,6 +102,16 @@ nav .navPart1 .catWrapper .sidebarNav ul li a button {
   width: 100%;
   text-align: left;
 }
+
+nav .navPart1 .catWrapper .sidebarNav   ul li button svg{font-size:12px; opacity:0.6;}
+
+nav .navPart1 .catWrapper .sidebarNav  ul li{position:static;}
+nav .navPart1 .catWrapper .sidebarNav ul li .submenu{position:absolute; top:0px;padding: 40px; left:101%; width:250px; height:100%; background:#fff; z-index:100; opacity:0; visibility:hidden;transition:all 0.2s ease-in-out ;border-left: 1px solid rgba(0, 0, 0, 0.1);}
+
+nav .navPart1 .catWrapper .sidebarNav ul li:hover .submenu{opacity:1; visibility:visible;left:100%; padding:20px ;}
+nav .navPart1 .catWrapper .sidebarNav ul li.active .submenu{opacity:1; visibility:visible;left:100%; padding:20px ;}
+
+nav .navPart1 .catWrapper .sidebarNav ul li:hover .submenu button{border-radius: 10px !important;}
 
 nav .allCatTab{ width: 100%;
   justify-content: flex-start !important;
@@ -246,3 +257,58 @@ nav .navPart2 ul li:hover .submenu{opacity:1; visibility:inherit; top:100%;}
   width: 24px;
   background: #2bbef9;
 }
+
+.servicesSection {padding:30px 0; border-top: 1px solid #e5e5e5; border-bottom: 1px solid #eee;}
+.serviceBox{display:flex;align-items: center; gap:15px;}
+.serviceBox .info h4{font-size:16px;font-weight:600;margin-bottom:3px;color:#222;}
+.serviceBox .info p{font-size:13px; color:#888;margin:0;}
+
+/*--PromoBanners--*/
+.promoSection {padding: 40px 0;}
+.bannerCard {position: relative;overflow: hidden;border-radius: 4px; display:flex;align-items: center; justify-content: space-between; background-color: #f5f5f5;height: 100%;}
+.tallCard{min-height: 520px;}
+.shortCard{min-height: 245px;}
+.bg-light-gray{background-color: #f2f2f2;}
+.bg-pinkish{background-color:#f7e8e5 ;}
+.bannerCard .info{padding: 30px; max-width:55%;z-index: 2;}
+.bannerCard .subtitle{font-size:11px;font-weight:700;letter-spacing: 1.5px;text-transform: uppercase; color:#555; display:block; margin-bottom: 10px;}
+.bannerCard h2{font-size:28px;font-weight:700;color:#111;line-height:1.2;margin-bottom:12px;}
+.bannerCard p{font-size:13px; color:#666;margin-bottom:15px;}
+.shopLink{font-size: 14px; font-weight: 700;color:#111; text-decoration:none; transition:color 0.2s ease;}
+.shopLink:hover{color:#007bff}
+.bannerCard img{position:absolute;right:0;bottom:0;max-height: 100%; object-fit: cover;z-index: 1;}
+
+/*--HomeProducts--*/
+.homeProductsSec { padding: 50px 0;}
+.homeProductsSec .hd {max-width: 650px; margin: 0 auto 40px auto;}
+.homeProductsSec .hd h2 {font-size: 28px;font-weight: 700;color: #111;margin-bottom: 10px;}
+.homeProductsSec .hd p {font-size: 14px;color: #777; line-height: 1.6;}
+
+.productItemWrapper {padding: 0 12px;}
+.productCard {background: #fff;border-radius: 4px;overflow: hidden;cursor: pointer;}
+.productCard .imgWrapper {
+  position: relative;
+  overflow: hidden;
+  background-color: #f4f4f4;
+  aspect-ratio: 3 / 4;
+  width: 100%;
+}
+
+.productCard .imgWrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+.badgeList {position: absolute;top: 15px;left: 15px;display: flex;flex-direction: column;gap: 6px;z-index: 3;}
+.discountBadge { background: #e6f7f0; color: #00b074; font-size: 12px; font-weight: 700;  padding: 4px 8px; border-radius: 3px;}
+.trendingBadge { background: #ffffff; color: #333; font-size: 11px; font-weight: 700; letter-spacing: 1px;padding: 4px 8px; border-radius: 3px;}
+
+.productCard .info { padding: 15px 0;}
+.productCard .rating { display: flex; align-items: center; gap: 5px; font-size: 12px; color: #222; font-weight: 600;margin-bottom: 8px;}
+.productCard .starIcon { color: #ffb400;}
+.productCard .title { font-size: 15px; font-weight: 600; color: #222; margin-bottom: 8px; line-height: 1.3;}
+.productCard .priceBox {  display: flex; align-items: center; gap: 10px;}
+.productCard .oldPrice { font-size: 14px; color: #aaa; text-decoration: line-through;}
+.productCard .newPrice { font-size: 16px; font-weight: 700; color: #111;}
