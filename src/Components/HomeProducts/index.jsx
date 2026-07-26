@@ -2,14 +2,10 @@ import React from 'react';
 import Slider from 'react-slick/lib/slider';
 import { FaStar } from 'react-icons/fa';
 
-import prod1Front from "../../assets/Images/prod1Front.png";
-import prod1Back from "../../assets/Images/prod1Back.png";
-import prod2Front from "../../assets/Images/prod2Front.png";
-import prod2Back from "../../assets/Images/prod2Back.png";
-import prod3Front from "../../assets/Images/prod3Front.png";
-import prod3Back from "../../assets/Images/prod3Back.png";
-
 const HomeProducts = () => {
+  // Fix for Vite CJS module wrapping
+  const SlickSlider = Slider.default || Slider;
+
   const settings = {
     dots: false,
     infinite: true,
@@ -28,13 +24,12 @@ const HomeProducts = () => {
     ]
   };
 
-  // 2. Use imported variables in your products array
   const products = [
     {
       id: 1,
       name: "Basic Colored Sweatpants With Elastic Hems",
-      image1: prod1Front,
-      image2: prod1Back,
+      image1: "/Images/prod1Front.png",
+      image2: "/Images/prod1Back.png",
       discount: "24%",
       badge: null,
       reviews: "2 reviews",
@@ -44,8 +39,8 @@ const HomeProducts = () => {
     {
       id: 2,
       name: "Basic High-Neck Puff Jacket",
-      image1: prod2Front,
-      image2: prod2Back,
+      image1: "/Images/prod2Front.png",
+      image2: "/Images/prod2Back.png",
       discount: "23%",
       badge: "TRENDING",
       reviews: "1 review",
@@ -55,8 +50,8 @@ const HomeProducts = () => {
     {
       id: 3,
       name: "Basic Relax Fit Leggings",
-      image1: prod3Front,
-      image2: prod3Back,
+      image1: "/Images/prod3Front.png",
+      image2: "/Images/prod3Back.png",
       discount: "17%",
       badge: null,
       reviews: "1 review",
@@ -78,7 +73,7 @@ const HomeProducts = () => {
         </div>
 
         <div className="productSlider">
-          <Slider {...settings}>
+          <SlickSlider {...settings}>
             {products.map((item) => (
               <div key={item.id} className="productItemWrapper">
                 <div className="productCard">
@@ -97,7 +92,7 @@ const HomeProducts = () => {
                   {/* Details */}
                   <div className="info">
                     <div className="rating">
-                      <FaStar className="starIcon" />
+                      <FaStar className="starIcon"/>
                       <span>{item.reviews}</span>
                     </div>
 
@@ -112,7 +107,7 @@ const HomeProducts = () => {
                 </div>
               </div>
             ))}
-          </Slider>
+          </SlickSlider>
         </div>
 
       </div>

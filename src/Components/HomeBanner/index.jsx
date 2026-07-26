@@ -1,18 +1,13 @@
 import React, { useState } from "react";
-import Home from "../../assets/Images/Home.png";
-import banner1 from "../../assets/Images/banner1.png";
-import banner2 from "../../assets/Images/banner2.png";
-import banner3 from "../../assets/Images/banner3.png";
-import banner4 from "../../assets/Images/banner4.png";
-import bannerVideo from "../../assets/Images/banner-video.mp4";
+
 
 const banners = [
-  { type: "image", src: Home },
-  { type: "image", src: banner1 },
-   { type: "video", src: bannerVideo },
-  { type: "image", src: banner2 },
-  { type: "image", src: banner3 },
-  { type: "image", src: banner4 },
+  { type: "image", src: "/Images/Home.png"},
+  { type: "image", src: "/Images/banner1.png" },
+   { type: "video", src: "/Images/banner-video.mp4" },
+  { type: "image", src: "/Images/banner2.png" },
+  { type: "image", src: "/Images/banner3.png" },
+  { type: "image", src: "/Images/banner4.png" },
   
 ];
 
@@ -63,7 +58,7 @@ const HomeBanner = () => {
               style={banner.type === "image" ? { backgroundImage: `url(${banner.src})` } : undefined}
             >
               {banner.type === "video" ? (
-                <video autoPlay loop muted playsInline>
+                <video autoPlay loop muted playsInline key={banner.src}>
                   <source src={banner.src} type="video/mp4" />
                 </video>
               ) : (

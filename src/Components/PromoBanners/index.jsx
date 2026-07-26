@@ -1,7 +1,5 @@
 import React from 'react';
-import bannerTall from "../../assets/Images/Promobanner1.png";
-import bannerTopRight from "../../assets/Images/Promobanner2.png";
-import bannerBottomRight from "../../assets/Images/Promobanner3.png";
+
 
 const PromoBanners = () => {
   return (
@@ -19,7 +17,7 @@ const PromoBanners = () => {
                 <a href="/shop" className="shopLink">Shop Now &rarr;</a>
               </div>
               <img 
-                src={bannerTall} alt="Big Patterns Trend"
+                src="/Images/Promobanner1.png" alt="Big Patterns Trend"
               />
             </div>
           </div>
@@ -36,7 +34,7 @@ const PromoBanners = () => {
                 <a href="/shop" className="shopLink">Shop Now &rarr;</a>
               </div>
               <img 
-               src={bannerTopRight} alt="Latest Men Trends"
+               src="/Images/Promobanner2.png" alt="Latest Men Trends"
               />
             </div>
 
@@ -49,7 +47,7 @@ const PromoBanners = () => {
                 <a href="/shop" className="shopLink">Shop Now &rarr;</a>
               </div>
               <img 
-                src={bannerBottomRight} alt="Summer Shoes"
+                src="/Images/Promobanner3.png" alt="Summer Shoes"
               />
             </div>
 

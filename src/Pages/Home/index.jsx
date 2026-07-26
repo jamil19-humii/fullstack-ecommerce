@@ -16,7 +16,7 @@ const Home=()=>{
 
                 <section className="homeProducts">
                     <div className="container">
-                      <div className="row>">
+                      <div className="row">
                         <div className="col-md-3">
                           
 
