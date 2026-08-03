@@ -310,11 +310,13 @@ nav .navPart2 ul li:hover .submenu{opacity:1; visibility:inherit; top:100%;}
 .productCard .imgWrapper img.primaryImg {
   opacity: 1 !important;
   z-index: 1 !important;
+  transition: opacity 0.3s ease-in-out !important;
 }
 
 .productCard .imgWrapper img.secondaryImg {
   opacity: 0 !important;
   z-index: 2 !important;
+  transition: opacity 0.3s ease-in-out !important;
 }
 
 .productCard:hover .imgWrapper img.secondaryImg {

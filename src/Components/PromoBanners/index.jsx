@@ -1,6 +1,7 @@
 import React from 'react';
 
 
+
 const PromoBanners = () => {
   return (
     <section className="promoSection">
@@ -17,8 +18,9 @@ const PromoBanners = () => {
                 <a href="/shop" className="shopLink">Shop Now &rarr;</a>
               </div>
               <img 
-                src="/Images/Promobanner1.png" alt="Big Patterns Trend"
-              />
+                src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=1200&auto=format&fit=crop" alt="Big Patterns Trend"
+              />https://klbtheme.com/clotya/wp-content/uploads/2022/04/banner-02.jpg
+              https://klbtheme.com/clotya/wp-content/uploads/2022/04/banner-03.jpg
             </div>
           </div>
 
@@ -34,7 +36,7 @@ const PromoBanners = () => {
                 <a href="/shop" className="shopLink">Shop Now &rarr;</a>
               </div>
               <img 
-               src="/Images/Promobanner2.png" alt="Latest Men Trends"
+               src="https://images.unsplash.com/photo-1445205170230-053b83016050?w=1200&auto=format&fit=crop" alt="Latest Men Trends"
               />
             </div>
 
@@ -47,7 +49,7 @@ const PromoBanners = () => {
                 <a href="/shop" className="shopLink">Shop Now &rarr;</a>
               </div>
               <img 
-                src="/Images/Promobanner3.png" alt="Summer Shoes"
+               src="https://images.unsplash.com/photo-1549298916-b41d501d3772?w=1200&auto=format&fit=crop" alt="Summer Shoes"
               />
             </div>
 

@@ -2,12 +2,26 @@ import React, { useState } from "react";
 
 
 const banners = [
-  { type: "image", src: "/Images/Home.png"},
-  { type: "image", src: "/Images/banner1.png" },
-   { type: "video", src: "/Images/banner-video.mp4" },
-  { type: "image", src: "/Images/banner2.png" },
-  { type: "image", src: "/Images/banner3.png" },
-  { type: "image", src: "/Images/banner4.png" },
+   { 
+    type: "image", 
+    src: "https://plus.unsplash.com/premium_photo-1706806943340-4a583fede794?w=1200&auto=format&fit=crop" 
+  },
+  { 
+    type: "image", 
+    src: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=1200&auto=format&fit=crop" 
+  },
+  { 
+    type: "image", 
+    src: "https://images.unsplash.com/photo-1472851294608-062f824d29cc?w=1200&auto=format&fit=crop" 
+  },
+  { 
+    type: "image", 
+    src: "https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?w=1200&auto=format&fit=crop" 
+  },
+  { 
+    type: "image", 
+    src: "https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?w=1200&auto=format&fit=crop" 
+  },
   
 ];
 

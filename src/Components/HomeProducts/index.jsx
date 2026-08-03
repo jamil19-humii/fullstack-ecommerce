@@ -28,7 +28,7 @@ const HomeProducts = () => {
     {
       id: 1,
       name: "Basic Colored Sweatpants With Elastic Hems",
-      image1: "/Images/prod1Front.png",
+      image1: "/Images/prod1Front.png", // Front sweatpants
       image2: "/Images/prod1Back.png",
       discount: "24%",
       badge: null,
