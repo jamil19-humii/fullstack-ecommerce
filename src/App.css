@@ -341,3 +341,43 @@ nav .navPart2 ul li:hover .submenu{opacity:1; visibility:inherit; top:100%;}
 .productCard .priceBox { display: flex; align-items: center; gap: 10px; }
 .productCard .oldPrice { font-size: 14px; color: #aaa; text-decoration: line-through; }
 .productCard .newPrice { font-size: 16px; font-weight: 700; color: #111; }
+
+/* -- Shop Page Grid -- */
+.shopGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+/* -- Product Card Link & Button Fixes -- */
+.productCard .title a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.productCard .addToCartBtn {
+  margin-top: 15px;
+  text-transform: capitalize !important;
+  border-radius: 4px !important;
+  background: #000 !important;
+  color: #fff !important;
+}
+
+.productCard .addToCartBtn:hover {
+  background: #333 !important;
+}
+
+/* -- Cart Page Styles -- */
+.cartPage { padding: 50px 0; }
+.cartTable { width: 100%; border-collapse: collapse; margin-bottom: 30px; }
+.cartTable th { text-align: left; padding: 15px; border-bottom: 2px solid #eee; color: #888; font-weight: 600; text-transform: uppercase; font-size: 14px; }
+.cartTable td { padding: 15px; border-bottom: 1px solid #eee; vertical-align: middle; }
+.cartTable .cartProduct { display: flex; align-items: center; gap: 15px; }
+.cartTable .cartProduct img { width: 80px; height: 100px; object-fit: cover; border-radius: 4px; }
+.cartTable .cartProduct h5 { margin: 0; font-size: 16px; font-weight: 600; }
+.qtyBox { display: flex; align-items: center; gap: 10px; }
+.qtyBox button { background: #f5f5f5; border: 1px solid #ddd; width: 30px; height: 30px; border-radius: 4px; cursor: pointer; font-weight: bold; }
+.removeBtn { color: #ea2b0f; cursor: pointer; background: none; border: none; font-size: 18px; }
+.cartSummary { background: #f9f9f9; padding: 30px; border-radius: 8px; }
+.cartSummary h4 { margin-bottom: 20px; text-transform: uppercase; }
+.cartSummary .totalRow { display: flex; justify-content: space-between; font-size: 20px; font-weight: 700; margin-top: 15px; padding-top: 15px; border-top: 1px solid #ddd; }
