@@ -28,8 +28,8 @@ const HomeProducts = () => {
     {
       id: 1,
       name: "Basic Colored Sweatpants With Elastic Hems",
-      image1: "/Images/prod1Front.png", // Front sweatpants
-      image2: "/Images/prod1Back.png",
+      image1: " https://images.unsplash.com/photo-1779675788296-e268de59beeb?w=600&auto=format&fit=crop", // Front sweatpants
+      image2: "https://images.unsplash.com/photo-1779675789716-7f526166ba29?w=600&auto=format&fit=crop", // Back sweatpants
       discount: "24%",
       badge: null,
       reviews: "2 reviews",
@@ -39,8 +39,8 @@ const HomeProducts = () => {
     {
       id: 2,
       name: "Basic High-Neck Puff Jacket",
-      image1: "/Images/prod2Front.png",
-      image2: "/Images/prod2Back.png",
+      image1: "https://images.unsplash.com/photo-1767257586789-3b5d09748311?w=600&auto=format&fit=crop ",
+      image2: "https://images.unsplash.com/photo-1767978292640-30ddee962a19?w=600&auto=format&fit=crop",
       discount: "23%",
       badge: "TRENDING",
       reviews: "1 review",
@@ -50,8 +50,8 @@ const HomeProducts = () => {
     {
       id: 3,
       name: "Basic Relax Fit Leggings",
-      image1: "/Images/prod3Front.png",
-      image2: "/Images/prod3Back.png",
+      image1: "https://images.unsplash.com/photo-1606902965551-dce093cda6e7?w=600&auto=format&fit=crop",
+      image2: "https://images.unsplash.com/photo-1606903037631-f09fd0bd74b4?w=600&auto=format&fit=crop",
       discount: "17%",
       badge: null,
       reviews: "1 review",

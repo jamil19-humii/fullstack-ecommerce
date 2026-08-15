@@ -1,10 +1,9 @@
 import React, { useState } from "react";
 
-
 const banners = [
-   { 
+  { 
     type: "image", 
-    src: "https://plus.unsplash.com/premium_photo-1706806943340-4a583fede794?w=1200&auto=format&fit=crop" 
+    src: "https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=1200&auto=format&fit=crop" 
   },
   { 
     type: "image", 
@@ -22,7 +21,6 @@ const banners = [
     type: "image", 
     src: "https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?w=1200&auto=format&fit=crop" 
   },
-  
 ];
 
 const HomeBanner = () => {
@@ -69,7 +67,11 @@ const HomeBanner = () => {
             <div
               className={`slide ${banner.type === "video" ? "videoSlide" : ""}`}
               key={`${banner.src}-${index}`}
-              style={banner.type === "image" ? { backgroundImage: `url(${banner.src})` } : undefined}
+              style={
+                banner.type === "image"
+                  ? { backgroundImage: `url('${banner.src}')` }
+                  : undefined
+              }
             >
               {banner.type === "video" ? (
                 <video autoPlay loop muted playsInline key={banner.src}>
