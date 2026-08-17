@@ -381,3 +381,4 @@ nav .navPart2 ul li:hover .submenu{opacity:1; visibility:inherit; top:100%;}
 .cartSummary { background: #f9f9f9; padding: 30px; border-radius: 8px; }
 .cartSummary h4 { margin-bottom: 20px; text-transform: uppercase; }
 .cartSummary .totalRow { display: flex; justify-content: space-between; font-size: 20px; font-weight: 700; margin-top: 15px; padding-top: 15px; border-top: 1px solid #ddd; }
+

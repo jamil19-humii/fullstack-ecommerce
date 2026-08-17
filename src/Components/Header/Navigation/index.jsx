@@ -5,7 +5,7 @@ import { FaAngleDown } from "react-icons/fa";
 import { Link } from 'react-router-dom';
 import { FaAngleRight } from "react-icons/fa";
 
-const  Navigation = ()=>{
+const Navigation = () => {
 
     const [isopenSidebarVal, setisopenSidebarVal] = useState(false);
     const [activeSubmenu, setActiveSubmenu] = useState(null);
@@ -20,40 +20,40 @@ const  Navigation = ()=>{
             activeCategory === category ? null : category
         );
     };
+    
     return(
-  <nav>
-                    <div className='container'>
-                        <div className='row'>
-                        <div className='col-sm-3 navPart1'>
-                            <div className='catWrapper'>
-                                <Button
-                                    className='allCatTab align-items-center'
-                                    onClick={toggleSidebar}
-                                    aria-expanded={isopenSidebarVal}
-                                >
+        <nav>
+            <div className='container'>
+                <div className='row'>
+                    <div className='col-sm-3 navPart1'>
+                        <div className='catWrapper'>
+                            <Button
+                                className='allCatTab align-items-center'
+                                onClick={toggleSidebar}
+                                aria-expanded={isopenSidebarVal}
+                            >
                                 <span className='icon1'><IoIosMenu/></span>
                                 <span className="text">ALL CATEGORIES</span>
                                 <span className='icon2'><FaAngleDown/></span>
-                             </Button>
+                            </Button>
 
-                             <div className={`sidebarNav ${isopenSidebarVal ? 'open' : ''}`}>
+                            <div className={`sidebarNav ${isopenSidebarVal ? 'open' : ''}`}>
                         
-                        <ul>
-                            <li className={activeSubmenu === "men" ? "active" : ""}>
-                                <Button
-                                    onClick={() => toggleSubmenu("men")}
-                                    aria-expanded={activeSubmenu === "men"}
-                                >
-                                    men <FaAngleRight className='ml-auto'/>
-                                </Button>
-                                <div className="submenu">
-                                    {/* Updated Links */}
-                                    <Link to="/shop"><Button>clothing</Button></Link>
-                                    <Link to="/shop"><Button>footwear</Button></Link>
-                                    <Link to="/product/1"><Button>watches</Button></Link>
-                                       </div>
-                            </li>
-                                   <li className={activeSubmenu === "women" ? "active" : ""}>
+                                <ul>
+                                    <li className={activeSubmenu === "men" ? "active" : ""}>
+                                        <Button
+                                            onClick={() => toggleSubmenu("men")}
+                                            aria-expanded={activeSubmenu === "men"}
+                                        >
+                                            men <FaAngleRight className='ml-auto'/>
+                                        </Button>
+                                        <div className="submenu">
+                                            <Link to="/shop/men"><Button>clothing</Button></Link>
+                                            <Link to="/shop/men"><Button>footwear</Button></Link>
+                                            <Link to="/product/1"><Button>watches</Button></Link>
+                                        </div>
+                                    </li>
+                                    <li className={activeSubmenu === "women" ? "active" : ""}>
                                         <Button
                                             onClick={() => toggleSubmenu("women")}
                                             aria-expanded={activeSubmenu === "women"}
@@ -61,85 +61,64 @@ const  Navigation = ()=>{
                                             women <FaAngleRight className='ml-auto'/>
                                         </Button>
                                         <div className="submenu">
-                                            {/* Updated Links */}
-                                            <Link to="/shop"><Button>clothing</Button></Link>
-                                            <Link to="/shop"><Button>footwear</Button></Link>
+                                            <Link to="/shop/women"><Button>clothing</Button></Link>
+                                            <Link to="/shop/women"><Button>footwear</Button></Link>
                                             <Link to="/product/2"><Button>watches</Button></Link>
                                         </div>
-                                   </li>
-                                    {/* Updated Links */}
-                                    <li><Link to="/shop"><Button>beauty</Button></Link></li>
-                                   <li> <Link to="/shop"><Button>watches</Button></Link></li>
-                                   <li> <Link to="/shop"><Button>kids</Button></Link></li>
-                                    <li><Link to="/shop"><Button>gifts</Button></Link></li>
-                                     <li> <Link to="/shop"><Button>men</Button></Link></li>
-                                   <li> <Link to="/shop"><Button>women</Button></Link></li>
-                                    <li><Link to="/shop"><Button>beauty</Button></Link></li>
-                                   <li> <Link to="/shop"><Button>watches</Button></Link></li>
-                                   <li> <Link to="/shop"><Button>kids</Button></Link></li>
-                                    <li><Link to="/shop"><Button>gifts</Button></Link></li>
-                         </ul>
-                             </div>
+                                    </li>
+                                    <li><Link to="/shop/accessories"><Button>beauty</Button></Link></li>
+                                    <li><Link to="/shop/accessories"><Button>watches</Button></Link></li>
+                                    <li><Link to="/shop/kids"><Button>kids</Button></Link></li>
+                                    <li><Link to="/shop/gifts"><Button>gifts</Button></Link></li>
+                                    <li><Link to="/shop/men"><Button>men</Button></Link></li>
+                                    <li><Link to="/shop/women"><Button>women</Button></Link></li>
+                                    <li><Link to="/shop/accessories"><Button>beauty</Button></Link></li>
+                                    <li><Link to="/shop/accessories"><Button>watches</Button></Link></li>
+                                    <li><Link to="/shop/kids"><Button>kids</Button></Link></li>
+                                    <li><Link to="/shop/gifts"><Button>gifts</Button></Link></li>
+                                </ul>
                             </div>
                         </div>
-
-                        <div className='col-sm-9 navPart2 d-flex align-items-center'>
-                            <ul className='list list-inline ms-auto '>
-                                      <li className='list-inline-item'><Link to="/"><Button>Home</Button></Link></li>
-                              
-                                <li className="list-inline-item">
-                                  {/* Updated Link */}
-                                  <Link to="/shop">
-                                   <Button>Men</Button>
-                                    </Link>
-                                <div className='submenu shadow'>
-                                    <Link to="/shop"><Button>clothing</Button></Link>
-                                    <Link to="/shop"><Button>footwear</Button></Link>
-                                    <Link to="/product/1"><Button>watches</Button></Link>
-                                     </div> 
-                                </li>
-                                <li className='list-inline-item'>
-                                {/* Updated Link */}
-                                <Link to="/shop">
-                                <Button>women</Button></Link>
-                                <div className='submenu shadow'>
-                                    <Link to="/shop"><Button>clothing</Button></Link>
-                                    <Link to="/shop"><Button>footwear</Button></Link>
-                                    <Link to="/product/2"><Button>watches</Button></Link>
-                                     </div>
-                                </li>
-                                <li className='list-inline-item'>
-                                {/* Updated Link */}
-                                <Link to="/shop">
-                                <Button>beauty</Button></Link>
-                                   <div className='submenu shadow'>
-                                    <Link to="/shop"><Button>clothing</Button></Link>
-                                    <Link to="/shop"><Button>footwear</Button></Link>
-                                    <Link to="/shop"><Button>watches</Button></Link>
-                                     </div>
-                                </li>
-                                <li className='list-inline-item'>
-                                {/* Updated Link */}
-                                <Link to="/shop">
-                                <Button>watches</Button></Link>
-                                   <div className='submenu shadow'>
-                                    <Link to="/shop"><Button>clothing</Button></Link>
-                                    <Link to="/shop"><Button>footwear</Button></Link>
-                                    <Link to="/shop"><Button>watches</Button></Link>
-                                     </div>
-                                </li>
-                                <li className='list-inline-item'><Link to="/shop"><Button>kids</Button></Link></li>
-                                   <li className='list-inline-item'><Link to="/shop"><Button>gifts</Button></Link></li>
-                                <li className='list-inline-item'><Link to="/"><Button>Blog</Button></Link></li>
-                                <li className='list-inline-item'><Link to="/"><Button>Contact</Button> </Link></li>
-                            </ul>
-                    
-                        </div>
-
-                        </div>
                     </div>
-                </nav>
-           
+
+                    <div className='col-sm-9 navPart2 d-flex align-items-center'>
+             
+<ul className='list list-inline ms-auto '>
+  <li className='list-inline-item'><Link to="/"><Button>Home</Button></Link></li>
+  
+  <li className="list-inline-item">
+    <Link to="/men"><Button>Men</Button></Link>
+    <div className='submenu shadow'>
+      <Link to="/men/clothing"><Button>clothing</Button></Link>
+      <Link to="/men/footwear"><Button>footwear</Button></Link>
+      <Link to="/men/watches"><Button>watches</Button></Link>
+    </div> 
+  </li>
+  
+  <li className='list-inline-item'>
+    <Link to="/women"><Button>women</Button></Link>
+    <div className='submenu shadow'>
+      <Link to="/women/clothing"><Button>clothing</Button></Link>
+      <Link to="/women/footwear"><Button>footwear</Button></Link>
+      <Link to="/women/watches"><Button>watches</Button></Link>
+    </div>
+  </li>
+  
+  <li className='list-inline-item'><Link to="/beauty"><Button>beauty</Button></Link></li>
+  <li className='list-inline-item'><Link to="/watches"><Button>watches</Button></Link></li>
+  <li className='list-inline-item'><Link to="/kids"><Button>kids</Button></Link></li>
+  <li className='list-inline-item'><Link to="/gifts"><Button>gifts</Button></Link></li>
+  <li className='list-inline-item'><Link to="/blogs"><Button>Blog</Button></Link></li>
+  <li className='list-inline-item'><Link to="/contact"><Button>Contact</Button></Link></li>
+</ul>
+                      
+                  
+                    </div>
+
+                </div>
+            </div>
+        </nav>
     )
 }
+
 export default Navigation;

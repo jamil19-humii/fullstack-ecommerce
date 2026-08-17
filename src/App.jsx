@@ -44,13 +44,26 @@ function App() {
         <MyContext.Provider value={values}>
           <Header />
           
-          <Routes>
-            <Route path="/" element={<Home />} />
-            {/* New Routes Added Here */}
-            <Route path="/shop" element={<Shop />} />
-            <Route path="/product/:id" element={<ProductDetail />} />
-            <Route path="/cart" element={<Cart />} />
-          </Routes>
+         <Routes>
+  <Route path="/" element={<Home />} />
+  
+  {/* Category Routes */}
+  <Route path="/men" element={<Shop />} />
+  <Route path="/men/:subcategory" element={<Shop />} />
+  <Route path="/women" element={<Shop />} />
+  <Route path="/women/:subcategory" element={<Shop />} />
+  <Route path="/beauty" element={<Shop />} />
+  <Route path="/watches" element={<Shop />} />
+  <Route path="/kids" element={<Shop />} />
+  <Route path="/gifts" element={<Shop />} />
+  
+  <Route path="/product/:id" element={<ProductDetail />} />
+  <Route path="/cart" element={<Cart />} />
+  
+  {/* Placeholders for Blogs & Contact so they don't crash */}
+  <Route path="/blogs" element={<div style={{padding: "100px", textAlign: "center"}}><h1>Blog Page Coming Soon</h1></div>} />
+  <Route path="/contact" element={<div style={{padding: "100px", textAlign: "center"}}><h1>Contact Page Coming Soon</h1></div>} />
+</Routes>
           
         </MyContext.Provider>
       </BrowserRouter>
