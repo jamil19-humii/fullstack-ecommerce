@@ -48,9 +48,9 @@ const Navigation = () => {
                                             men <FaAngleRight className='ml-auto'/>
                                         </Button>
                                         <div className="submenu">
-                                            <Link to="/shop/men"><Button>clothing</Button></Link>
-                                            <Link to="/shop/men"><Button>footwear</Button></Link>
-                                            <Link to="/product/1"><Button>watches</Button></Link>
+                                            <Link to="/men/clothing"><Button>clothing</Button></Link>
+                                            <Link to="/men/footwear"><Button>footwear</Button></Link>
+                                            <Link to="/men/watches"><Button>watches</Button></Link>
                                         </div>
                                     </li>
                                     <li className={activeSubmenu === "women" ? "active" : ""}>
@@ -61,58 +61,55 @@ const Navigation = () => {
                                             women <FaAngleRight className='ml-auto'/>
                                         </Button>
                                         <div className="submenu">
-                                            <Link to="/shop/women"><Button>clothing</Button></Link>
-                                            <Link to="/shop/women"><Button>footwear</Button></Link>
-                                            <Link to="/product/2"><Button>watches</Button></Link>
+                                            <Link to="/women/clothing"><Button>clothing</Button></Link>
+                                            <Link to="/women/footwear"><Button>footwear</Button></Link>
+                                            <Link to="/women/watches"><Button>watches</Button></Link>
                                         </div>
                                     </li>
-                                    <li><Link to="/shop/accessories"><Button>beauty</Button></Link></li>
-                                    <li><Link to="/shop/accessories"><Button>watches</Button></Link></li>
-                                    <li><Link to="/shop/kids"><Button>kids</Button></Link></li>
-                                    <li><Link to="/shop/gifts"><Button>gifts</Button></Link></li>
-                                    <li><Link to="/shop/men"><Button>men</Button></Link></li>
-                                    <li><Link to="/shop/women"><Button>women</Button></Link></li>
-                                    <li><Link to="/shop/accessories"><Button>beauty</Button></Link></li>
-                                    <li><Link to="/shop/accessories"><Button>watches</Button></Link></li>
-                                    <li><Link to="/shop/kids"><Button>kids</Button></Link></li>
-                                    <li><Link to="/shop/gifts"><Button>gifts</Button></Link></li>
+                                    <li><Link to="/beauty"><Button>beauty</Button></Link></li>
+                                    <li><Link to="/watches"><Button>watches</Button></Link></li>
+                                    <li><Link to="/kids"><Button>kids</Button></Link></li>
+                                    <li><Link to="/gifts"><Button>gifts</Button></Link></li>
+                                    <li><Link to="/men"><Button>men</Button></Link></li>
+                                    <li><Link to="/women"><Button>women</Button></Link></li>
+                                    <li><Link to="/beauty"><Button>beauty</Button></Link></li>
+                                    <li><Link to="/watches"><Button>watches</Button></Link></li>
+                                    <li><Link to="/kids"><Button>kids</Button></Link></li>
+                                    <li><Link to="/gifts"><Button>gifts</Button></Link></li>
                                 </ul>
                             </div>
                         </div>
                     </div>
 
                     <div className='col-sm-9 navPart2 d-flex align-items-center'>
-             
-<ul className='list list-inline ms-auto '>
-  <li className='list-inline-item'><Link to="/"><Button>Home</Button></Link></li>
-  
-  <li className="list-inline-item">
-    <Link to="/men"><Button>Men</Button></Link>
-    <div className='submenu shadow'>
-      <Link to="/men/clothing"><Button>clothing</Button></Link>
-      <Link to="/men/footwear"><Button>footwear</Button></Link>
-      <Link to="/men/watches"><Button>watches</Button></Link>
-    </div> 
-  </li>
-  
-  <li className='list-inline-item'>
-    <Link to="/women"><Button>women</Button></Link>
-    <div className='submenu shadow'>
-      <Link to="/women/clothing"><Button>clothing</Button></Link>
-      <Link to="/women/footwear"><Button>footwear</Button></Link>
-      <Link to="/women/watches"><Button>watches</Button></Link>
-    </div>
-  </li>
-  
-  <li className='list-inline-item'><Link to="/beauty"><Button>beauty</Button></Link></li>
-  <li className='list-inline-item'><Link to="/watches"><Button>watches</Button></Link></li>
-  <li className='list-inline-item'><Link to="/kids"><Button>kids</Button></Link></li>
-  <li className='list-inline-item'><Link to="/gifts"><Button>gifts</Button></Link></li>
-  <li className='list-inline-item'><Link to="/blogs"><Button>Blog</Button></Link></li>
-  <li className='list-inline-item'><Link to="/contact"><Button>Contact</Button></Link></li>
-</ul>
-                      
-                  
+                        <ul className='list list-inline ms-auto '>
+                            <li className='list-inline-item'><Link to="/"><Button>Home</Button></Link></li>
+                            
+                            <li className="list-inline-item">
+                                <Link to="/men"><Button>Men</Button></Link>
+                                <div className='submenu shadow'>
+                                    <Link to="/men/clothing"><Button>clothing</Button></Link>
+                                    <Link to="/men/footwear"><Button>footwear</Button></Link>
+                                    <Link to="/men/watches"><Button>watches</Button></Link>
+                                </div> 
+                            </li>
+                            
+                            <li className='list-inline-item'>
+                                <Link to="/women"><Button>Women</Button></Link>
+                                <div className='submenu shadow'>
+                                    <Link to="/women/clothing"><Button>clothing</Button></Link>
+                                    <Link to="/women/footwear"><Button>footwear</Button></Link>
+                                    <Link to="/women/watches"><Button>watches</Button></Link>
+                                </div>
+                            </li>
+                            
+                            <li className='list-inline-item'><Link to="/beauty"><Button>beauty</Button></Link></li>
+                            <li className='list-inline-item'><Link to="/watches"><Button>watches</Button></Link></li>
+                            <li className='list-inline-item'><Link to="/kids"><Button>kids</Button></Link></li>
+                            <li className='list-inline-item'><Link to="/gifts"><Button>gifts</Button></Link></li>
+                            <li className='list-inline-item'><Link to="/blogs"><Button>Blog</Button></Link></li>
+                            <li className='list-inline-item'><Link to="/contact"><Button>Contact</Button></Link></li>
+                        </ul>
                     </div>
 
                 </div>

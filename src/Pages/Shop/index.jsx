@@ -4,19 +4,19 @@ import { products } from "../../data/products";
 import ProductCard from "../../Components/ProductCard";
 
 const Shop = () => {
-  const { category, subcategory } = useParams(); 
+const { category, subcategory } = useParams(); 
   
-  // 1. Filter by Category
-  let displayedProducts = category 
-    ? products.filter(p => p.category.toLowerCase() === category.toLowerCase())
-    : products;
+// 1. Filter by Category
+let displayedProducts = category 
+  ? products.filter(p => p.category.toLowerCase() === category.toLowerCase())
+  : products;
 
-  // 2. Filter by Subcategory
-  if (subcategory) {
-    displayedProducts = displayedProducts.filter(p => 
-      p.subcategory && p.subcategory.toLowerCase() === subcategory.toLowerCase()
-    );
-  }
+// 2. Filter by Subcategory
+if (subcategory) {
+  displayedProducts = displayedProducts.filter(p => 
+    p.subcategory && p.subcategory.toLowerCase() === subcategory.toLowerCase()
+  );
+}
 
   // Clean Title
   const formatTitle = (str) => str ? str.charAt(0).toUpperCase() + str.slice(1) : "All Products";
@@ -26,14 +26,11 @@ const Shop = () => {
     <section className="homeProductsSec">
       <div className="container">
         
-        {/* Simple, Clean Header */}
         <div className="hd text-center" style={{ marginBottom: "40px" }}>
           <h2>{pageTitle}</h2>
         </div>
 
-        {/* Main Product Area */}
         <div className="shopMain">
-          {/* Clean Product Grid */}
           <div className="shopGrid">
             {displayedProducts.length > 0 ? (
               displayedProducts.map((product) => (

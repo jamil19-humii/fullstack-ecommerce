@@ -44,25 +44,16 @@ function App() {
         <MyContext.Provider value={values}>
           <Header />
           
-         <Routes>
+<Routes>
   <Route path="/" element={<Home />} />
   
-  {/* Category Routes */}
-  <Route path="/men" element={<Shop />} />
-  <Route path="/men/:subcategory" element={<Shop />} />
-  <Route path="/women" element={<Shop />} />
-  <Route path="/women/:subcategory" element={<Shop />} />
-  <Route path="/beauty" element={<Shop />} />
-  <Route path="/watches" element={<Shop />} />
-  <Route path="/kids" element={<Shop />} />
-  <Route path="/gifts" element={<Shop />} />
-  
+  {/* THIS IS THE FIX: Generic category routes */}
+  <Route path="/:category" element={<Shop />} />
+  <Route path="/:category/:subcategory" element={<Shop />} />
+
+  {/* Product & Cart */}
   <Route path="/product/:id" element={<ProductDetail />} />
   <Route path="/cart" element={<Cart />} />
-  
-  {/* Placeholders for Blogs & Contact so they don't crash */}
-  <Route path="/blogs" element={<div style={{padding: "100px", textAlign: "center"}}><h1>Blog Page Coming Soon</h1></div>} />
-  <Route path="/contact" element={<div style={{padding: "100px", textAlign: "center"}}><h1>Contact Page Coming Soon</h1></div>} />
 </Routes>
           
         </MyContext.Provider>
