@@ -67,15 +67,10 @@ const Navigation = () => {
                                         </div>
                                     </li>
                                     <li><Link to="/beauty"><Button>beauty</Button></Link></li>
+                                     <li><Link to="/kids"><Button>kids</Button></Link></li>
                                     <li><Link to="/watches"><Button>watches</Button></Link></li>
-                                    <li><Link to="/kids"><Button>kids</Button></Link></li>
                                     <li><Link to="/gifts"><Button>gifts</Button></Link></li>
-                                    <li><Link to="/men"><Button>men</Button></Link></li>
-                                    <li><Link to="/women"><Button>women</Button></Link></li>
-                                    <li><Link to="/beauty"><Button>beauty</Button></Link></li>
-                                    <li><Link to="/watches"><Button>watches</Button></Link></li>
-                                    <li><Link to="/kids"><Button>kids</Button></Link></li>
-                                    <li><Link to="/gifts"><Button>gifts</Button></Link></li>
+                                   
                                 </ul>
                             </div>
                         </div>
@@ -104,8 +99,8 @@ const Navigation = () => {
                             </li>
                             
                             <li className='list-inline-item'><Link to="/beauty"><Button>beauty</Button></Link></li>
+                             <li className='list-inline-item'><Link to="/kids"><Button>kids</Button></Link></li>
                             <li className='list-inline-item'><Link to="/watches"><Button>watches</Button></Link></li>
-                            <li className='list-inline-item'><Link to="/kids"><Button>kids</Button></Link></li>
                             <li className='list-inline-item'><Link to="/gifts"><Button>gifts</Button></Link></li>
                             <li className='list-inline-item'><Link to="/blogs"><Button>Blog</Button></Link></li>
                             <li className='list-inline-item'><Link to="/contact"><Button>Contact</Button></Link></li>
