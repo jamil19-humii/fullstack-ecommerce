@@ -68,8 +68,8 @@ const Navigation = () => {
                                     </li>
                                     <li><Link to="/beauty"><Button>beauty</Button></Link></li>
                                      <li><Link to="/kids"><Button>kids</Button></Link></li>
-                                    <li><Link to="/watches"><Button>watches</Button></Link></li>
-                                    <li><Link to="/gifts"><Button>gifts</Button></Link></li>
+                                    <li><Link to="/bags-luggage"><Button>bags&luggage</Button></Link></li>
+                                    <li><Link to="/sports-outdoor"><Button>sports&outdoor</Button></Link></li>
                                    
                                 </ul>
                             </div>
@@ -100,8 +100,8 @@ const Navigation = () => {
                             
                             <li className='list-inline-item'><Link to="/beauty"><Button>beauty</Button></Link></li>
                              <li className='list-inline-item'><Link to="/kids"><Button>kids</Button></Link></li>
-                            <li className='list-inline-item'><Link to="/watches"><Button>watches</Button></Link></li>
-                            <li className='list-inline-item'><Link to="/gifts"><Button>gifts</Button></Link></li>
+                            <li className='list-inline-item'><Link to="/bags-luggage"><Button>bags&luggage</Button></Link></li>
+                            <li className='list-inline-item'><Link to="/sports-outdoor"><Button>sports&outdoor</Button></Link></li>
                             <li className='list-inline-item'><Link to="/blogs"><Button>Blog</Button></Link></li>
                             <li className='list-inline-item'><Link to="/contact"><Button>Contact</Button></Link></li>
                         </ul>

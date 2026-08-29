@@ -9,8 +9,11 @@ import ProductDetail from "./Pages/ProductDetail";
 import Cart from "./Pages/Cart";
 import { CartProvider } from "./CartContext";
 
+import Blog from "./Pages/Blog";
+
 import { createContext, useEffect, useState } from "react";
 import axios from 'axios';
+
 
 const MyContext = createContext();
 
@@ -54,6 +57,7 @@ function App() {
   {/* Product & Cart */}
   <Route path="/product/:id" element={<ProductDetail />} />
   <Route path="/cart" element={<Cart />} />
+  <Route path="/blogs" element={<Blog />} />
 </Routes>
           
         </MyContext.Provider>

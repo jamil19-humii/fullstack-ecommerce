@@ -22,15 +22,13 @@ if (subcategory) {
   const formatTitle = (str) => str ? str.charAt(0).toUpperCase() + str.slice(1) : "All Products";
   const pageTitle = subcategory ? formatTitle(subcategory) : formatTitle(category);
 
-  return (
+    return (
     <section className="homeProductsSec">
       <div className="container">
         
-        <div className="hd text-center" style={{ marginBottom: "40px" }}>
-          <h2>{pageTitle}</h2>
-        </div>
-
+        {/* Main Product Area */}
         <div className="shopMain">
+          {/* Clean Product Grid */}
           <div className="shopGrid">
             {displayedProducts.length > 0 ? (
               displayedProducts.map((product) => (
@@ -48,6 +46,7 @@ if (subcategory) {
       </div>
     </section>
   );
+
 };
 
 export default Shop;
