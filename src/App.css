@@ -382,3 +382,132 @@ nav .navPart2 ul li:hover .submenu{opacity:1; visibility:inherit; top:100%;}
 .cartSummary h4 { margin-bottom: 20px; text-transform: uppercase; }
 .cartSummary .totalRow { display: flex; justify-content: space-between; font-size: 20px; font-weight: 700; margin-top: 15px; padding-top: 15px; border-top: 1px solid #ddd; }
 
+/*--Testimonials--*/
+.testimonialsSec { padding: 50px 0; }
+.testimonialsSec .hd { max-width: 650px; margin: 0 auto 40px auto; text-align: center; }
+.testimonialsSec .hd h2 { font-size: 28px; font-weight: 700; color: #111; margin-bottom: 10px; }
+.testimonialsSec .hd p { font-size: 14px; color: #777; line-height: 1.6; }
+
+.testimonialGrid { display: flex; gap: 20px; }
+
+.testimonialCard { background: #fff; border: 1px solid #eee; border-radius: 4px; padding: 20px; flex: 1; }
+.testimonialCard .stars { color: #ffb400; font-size: 14px; margin-bottom: 10px; }
+.testimonialCard .quote { font-size: 14px; color: #666; line-height: 1.6; margin-bottom: 15px; }
+
+.testimonialCard .customer { display: flex; align-items: center; gap: 12px; }
+.testimonialCard .customer .avatar { width: 36px; height: 36px; border-radius: 50%; background: #f5f5f5; display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 700; color: #888; }
+.testimonialCard .customer h5 { margin: 0; font-size: 14px; font-weight: 600; color: #222; }
+
+.testimonialsSec { padding: 50px 0; border-top: 1px solid #eee; }
+
+@media (max-width: 768px) {
+  .testimonialGrid { flex-direction: column; }
+}
+
+/*--Newsletter--*/
+.newsletterSec { padding: 40px 0; background-color: #f5f5f5; border-top: 1px solid #eee; border-bottom: 1px solid #eee; }
+
+.newsletterRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.newsletterInfo { max-width: 380px; }
+.newsletterInfo h2 { font-size: 18px; font-weight: 700; color: #111; margin-bottom: 8px; }
+.newsletterInfo p { font-size: 13px; color: #666; line-height: 1.6; }
+
+.newsletterFormWrap { flex: 1; min-width: 300px; max-width: 480px; }
+.newsletterForm label { display: block; font-size: 13px; font-weight: 700; color: #111; margin-bottom: 8px; }
+
+.inputRow { display: flex; gap: 10px; }
+.inputRow input {
+  flex: 1;
+  height: 44px;
+  padding: 0 15px;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  font-size: 14px;
+  outline: none;
+  background: #fff;
+}
+.inputRow button {
+  height: 44px;
+  padding: 0 25px;
+  background: #000;
+  color: #fff;
+  border: none;
+  border-radius: 2px;
+  font-weight: 700;
+  font-size: 14px;
+  cursor: pointer;
+}
+.inputRow button:hover { background: #333; }
+
+.newsletterDisclaimer {
+  font-size: 11px;
+  color: #888;
+  margin-top: 25px;
+  line-height: 1.6;
+}
+.newsletterDisclaimer a {
+  color: #888;
+  text-decoration: underline;
+}
+.newsletterDisclaimer a:hover { color: #333; }
+
+.successMsg { font-size: 14px; font-weight: 600; color: #00b074; }
+
+@media (max-width: 768px) {
+  .newsletterRow { flex-direction: column; }
+  .inputRow { flex-direction: column; }
+}
+
+
+/*--Footer--*/
+.footerSec { padding: 50px 0 0; background-color: #111; color: #ccc; }
+
+.footerTop {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr;
+  gap: 30px;
+  padding-bottom: 40px;
+}
+
+.footerBrand h3 { color: #fff; font-size: 20px; font-weight: 700; margin-bottom: 12px; }
+.footerBrand p { font-size: 13px; line-height: 1.6; color: #999; max-width: 280px; }
+
+.footerCol h4 { color: #fff; font-size: 14px; font-weight: 700; text-transform: uppercase; margin-bottom: 15px; letter-spacing: 0.5px; }
+.footerCol ul { list-style: none; }
+.footerCol ul li { margin-bottom: 10px; }
+.footerCol ul li a { color: #999; font-size: 13px; text-decoration: none; transition: color 0.2s ease; }
+.footerCol ul li a:hover { color: #fff; }
+
+.footerSocial { display: flex; gap: 10px; }
+.footerSocial a {
+  width: 36px; height: 36px;
+  display: flex; align-items: center; justify-content: center;
+  border: 1px solid #333; border-radius: 50%;
+  color: #ccc; font-size: 11px; font-weight: 700;
+  text-decoration: none; transition: all 0.2s ease;
+}
+.footerSocial a:hover { background: #fff; color: #111; border-color: #fff; }
+
+.footerBottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #2a2a2a;
+  padding: 20px 0;
+  font-size: 12px;
+  color: #888;
+}
+
+.footerPayments { display: flex; gap: 15px; font-size: 12px; color: #888; }
+
+@media (max-width: 768px) {
+  .footerTop { grid-template-columns: 1fr 1fr; }
+  .footerBottom { flex-direction: column; gap: 10px; text-align: center; }
+}

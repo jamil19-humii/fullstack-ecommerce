@@ -3,6 +3,8 @@ import HomeBanner from "../../Components/HomeBanner";
 import Services from "../../Components/Services";
 import PromoBanners from '../../Components/PromoBanners';
 import HomeProducts from "../../Components/HomeProducts";
+import Testimonials from "../../Components/Testimonials";
+import Newsletter from "../../Components/Newsletter";
 
 
 const Home=()=>{
@@ -13,6 +15,8 @@ const Home=()=>{
                   <Services/>
                   <PromoBanners />
                   <HomeProducts/>
+                  <Testimonials />
+                  <Newsletter />
 
                 <section className="homeProducts">
                     <div className="container">

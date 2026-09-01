@@ -10,6 +10,7 @@ import Cart from "./Pages/Cart";
 import { CartProvider } from "./CartContext";
 
 import Blog from "./Pages/Blog";
+import Footer from "./Components/Footer";
 
 import { createContext, useEffect, useState } from "react";
 import axios from 'axios';
@@ -59,6 +60,7 @@ function App() {
   <Route path="/cart" element={<Cart />} />
   <Route path="/blogs" element={<Blog />} />
 </Routes>
+   <Footer />
           
         </MyContext.Provider>
       </BrowserRouter>
