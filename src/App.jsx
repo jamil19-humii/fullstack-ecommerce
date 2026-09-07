@@ -15,6 +15,12 @@ import Footer from "./Components/Footer";
 import { createContext, useEffect, useState } from "react";
 import axios from 'axios';
 
+import Contact from "./Pages/Contact";
+import Shipping from "./Pages/Shipping";
+import Returns from "./Pages/Returns";
+import FAQ from "./Pages/FAQ";
+
+import BlogDetail from "./Pages/BlogDetail";
 
 const MyContext = createContext();
 
@@ -59,6 +65,16 @@ function App() {
   <Route path="/product/:id" element={<ProductDetail />} />
   <Route path="/cart" element={<Cart />} />
   <Route path="/blogs" element={<Blog />} />
+
+<Route path="/contact" element={<Contact />} />
+<Route path="/shipping" element={<Shipping />} />
+<Route path="/returns" element={<Returns />} />
+<Route path="/faq" element={<FAQ />} />
+
+
+<Route path="/blogs" element={<Blog />} />
+<Route path="/blog/:id" element={<BlogDetail />} />
+
 </Routes>
    <Footer />
           

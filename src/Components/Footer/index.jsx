@@ -1,4 +1,3 @@
-// src/Components/Footer/index.jsx
 import { Link } from "react-router-dom";
 
 const Footer = () => {
@@ -17,10 +16,10 @@ const Footer = () => {
           <div className="footerCol">
             <h4>Shop</h4>
             <ul>
-              <li><Link to="/shop?cat=men">Men</Link></li>
-              <li><Link to="/shop?cat=women">Women</Link></li>
-              <li><Link to="/shop?cat=kids">Kids</Link></li>
-              <li><Link to="/shop?cat=bags-luggage">Bags & luggage</Link></li>
+              <li><Link to="/men">Men</Link></li>
+              <li><Link to="/women">Women</Link></li>
+              <li><Link to="/kids">Kids</Link></li>
+              <li><Link to="/bags-luggage">Bags & luggage</Link></li>
             </ul>
           </div>
 
@@ -35,11 +34,24 @@ const Footer = () => {
           </div>
 
           <div className="footerCol">
-            <h4>Follow us</h4>
+            <h4>Connect</h4>
             <div className="footerSocial">
-              <a href="#" aria-label="Instagram">IG</a>
-              <a href="#" aria-label="Facebook">FB</a>
-              <a href="#" aria-label="TikTok">TT</a>
+              <a
+                href="https://github.com/jamil19-humii"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="GitHub"
+              >
+                GH
+              </a>
+              <a
+                href="https://www.linkedin.com/in/humii-jamila-935b833a1/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+              >
+                IN
+              </a>
             </div>
           </div>
         </div>
