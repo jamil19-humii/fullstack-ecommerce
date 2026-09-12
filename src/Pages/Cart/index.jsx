@@ -3,9 +3,11 @@ import { Link } from "react-router-dom";
 import { useCart } from "../../CartContext";
 import Button from "@mui/material/Button";
 import { FaTrash } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 
 const Cart = () => {
   const { cartItems, removeFromCart, updateQuantity, cartTotal } = useCart();
+    const navigate = useNavigate();
 
   // If cart is empty
   if (cartItems.length === 0) {
@@ -86,9 +88,15 @@ const Cart = () => {
                 <span>Total</span>
                 <span>${cartTotal.toFixed(2)}</span>
               </div>
-              <Button variant="contained" fullWidth className="addToCartBtn" style={{ marginTop: "20px", padding: "15px" }}>
-                Proceed to Checkout
-              </Button>
+              <Button
+  variant="contained"
+  fullWidth
+  className="addToCartBtn"
+  style={{ marginTop: "20px", padding: "15px" }}
+  onClick={() => navigate("/checkout")}
+>
+  Proceed to Checkout
+</Button>
             </div>
           </div>
         </div>

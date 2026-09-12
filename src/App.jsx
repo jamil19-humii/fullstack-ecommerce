@@ -21,6 +21,8 @@ import Returns from "./Pages/Returns";
 import FAQ from "./Pages/FAQ";
 
 import BlogDetail from "./Pages/BlogDetail";
+import Checkout from "./Pages/Checkout";
+import Login from "./Pages/Login";
 
 const MyContext = createContext();
 
@@ -56,8 +58,18 @@ function App() {
           
 <Routes>
   <Route path="/" element={<Home />} />
-  
-  {/* THIS IS THE FIX: Generic category routes */}
+
+  {/* Static info pages */}
+  <Route path="/contact" element={<Contact />} />
+  <Route path="/shipping" element={<Shipping />} />
+  <Route path="/returns" element={<Returns />} />
+  <Route path="/faq" element={<FAQ />} />
+  <Route path="/checkout" element={<Checkout />} />
+
+  {/* Add this — dedicated shop/search page, no category filter */}
+  <Route path="/shop" element={<Shop />} />
+
+  {/* Generic category routes */}
   <Route path="/:category" element={<Shop />} />
   <Route path="/:category/:subcategory" element={<Shop />} />
 
@@ -65,16 +77,8 @@ function App() {
   <Route path="/product/:id" element={<ProductDetail />} />
   <Route path="/cart" element={<Cart />} />
   <Route path="/blogs" element={<Blog />} />
-
-<Route path="/contact" element={<Contact />} />
-<Route path="/shipping" element={<Shipping />} />
-<Route path="/returns" element={<Returns />} />
-<Route path="/faq" element={<FAQ />} />
-
-
-<Route path="/blogs" element={<Blog />} />
-<Route path="/blog/:id" element={<BlogDetail />} />
-
+  <Route path="/blog/:id" element={<BlogDetail />} />
+  <Route path="/login" element={<Login />} />
 </Routes>
    <Footer />
           

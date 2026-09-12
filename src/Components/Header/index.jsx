@@ -30,23 +30,24 @@ const Header = () => {
 
                             <SearchBox />
 
-                            <div className='part3 d-flex align-items-center ms-auto'>
-                                <Button className='circle mr-3'><FiUser /></Button>
-                                
-                                {/* Wrapped the cartTab in a Link to /cart */}
-                                <Link to="/cart" style={{ textDecoration: 'none', color: 'inherit' }}>
-                                    <div className='ml-auto cartTab d-flex align-items-center'>
-                                        {/* Live Cart Total */}
-                                        <span className='price'>${cartTotal.toFixed(2)}</span>
-                                        <div className='position-relative ml-2'>
-                                            <Button className='circle'><IoBagOutline /></Button>
-                                            {/* Live Cart Count */}
-                                            <span className='count d-flex align-items-center justify-content-center'>{cartCount}</span>
-                                        </div>
-                                    </div>
-                                </Link>
+                               <div className='part3 d-flex align-items-center ms-auto'>
+    <Link to="/login">
+        <Button className='circle mr-3'><FiUser /></Button>
+    </Link>
 
-                            </div>
+    {/* Wrapped the cartTab in a Link to /cart */}
+    <Link to="/cart" style={{ textDecoration: 'none', color: 'inherit' }}>
+        <div className='ml-auto cartTab d-flex align-items-center'>
+            {/* Live Cart Total */}
+            <span className='price'>${cartTotal.toFixed(2)}</span>
+            <div className='position-relative ml-2'>
+                <Button className='circle'><IoBagOutline /></Button>
+                {/* Live Cart Count */}
+                <span className='count d-flex align-items-center justify-content-center'>{cartCount}</span>
+            </div>
+        </div>
+    </Link>
+</div>
                         </div>
                     </div>
                 </div>

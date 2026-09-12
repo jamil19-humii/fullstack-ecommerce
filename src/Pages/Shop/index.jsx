@@ -1,34 +1,44 @@
-import React from "react";
-import { useParams, Link } from "react-router-dom";
+import { useParams, useSearchParams, Link } from "react-router-dom";
+import Fuse from "fuse.js";
 import { products } from "../../data/products";
 import ProductCard from "../../Components/ProductCard";
 
 const Shop = () => {
-const { category, subcategory } = useParams(); 
-  
-// 1. Filter by Category
-let displayedProducts = category 
-  ? products.filter(p => p.category.toLowerCase() === category.toLowerCase())
-  : products;
+  const { category, subcategory } = useParams();
+  const [searchParams] = useSearchParams();
+  const searchQuery = searchParams.get("search");
 
-// 2. Filter by Subcategory
-if (subcategory) {
-  displayedProducts = displayedProducts.filter(p => 
-    p.subcategory && p.subcategory.toLowerCase() === subcategory.toLowerCase()
-  );
-}
+  let displayedProducts = category
+    ? products.filter((p) => p.category.toLowerCase() === category.toLowerCase())
+    : products;
 
-  // Clean Title
-  const formatTitle = (str) => str ? str.charAt(0).toUpperCase() + str.slice(1) : "All Products";
-  const pageTitle = subcategory ? formatTitle(subcategory) : formatTitle(category);
+  if (subcategory) {
+    displayedProducts = displayedProducts.filter(
+      (p) => p.subcategory && p.subcategory.toLowerCase() === subcategory.toLowerCase()
+    );
+  }
 
-    return (
+  if (searchQuery) {
+    const fuse = new Fuse(products, {
+      keys: ["name", "category", "subcategory"],
+      threshold: 0.4, // lower = stricter, higher = looser matching
+    });
+    displayedProducts = fuse.search(searchQuery).map((result) => result.item);
+  }
+
+  const formatTitle = (str) => (str ? str.charAt(0).toUpperCase() + str.slice(1) : "All Products");
+  const pageTitle = searchQuery
+    ? `Search results for "${searchQuery}"`
+    : subcategory
+    ? formatTitle(subcategory)
+    : formatTitle(category);
+
+  return (
     <section className="homeProductsSec">
       <div className="container">
-        
-        {/* Main Product Area */}
+        <h2 style={{ marginBottom: "30px" }}>{pageTitle}</h2>
+
         <div className="shopMain">
-          {/* Clean Product Grid */}
           <div className="shopGrid">
             {displayedProducts.length > 0 ? (
               displayedProducts.map((product) => (
@@ -37,16 +47,16 @@ if (subcategory) {
             ) : (
               <div style={{ textAlign: "center", padding: "50px", width: "100%" }}>
                 <h4>No products found.</h4>
-                <Link to="/" style={{ color: "#2bbef9", textDecoration: "none" }}>Back to Home</Link>
+                <Link to="/" style={{ color: "#2bbef9", textDecoration: "none" }}>
+                  Back to Home
+                </Link>
               </div>
             )}
           </div>
         </div>
-
       </div>
     </section>
   );
-
 };
 
 export default Shop;
